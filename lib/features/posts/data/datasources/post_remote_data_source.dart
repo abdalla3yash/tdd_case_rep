@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'package:poster/core/strings/constants.dart';
+
 import '../../../../core/error/exceptions.dart';
 import '../models/post_model.dart';
 import 'package:dartz/dartz.dart';
@@ -11,8 +13,6 @@ abstract class PostRemoteDataSource {
   Future<Unit> updatePost(PostModel postModel);
   Future<Unit> addPost(PostModel postModel);
 }
-
-const BASE_URL = "https://jsonplaceholder.typicode.com";
 
 class PostRemoteDataSourceImpl implements PostRemoteDataSource {
   final http.Client client;
