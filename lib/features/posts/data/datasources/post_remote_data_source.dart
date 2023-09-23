@@ -60,7 +60,6 @@ class PostRemoteDataSourceImpl implements PostRemoteDataSource {
       Uri.parse("$BASE_URL/posts/${postId.toString()}"),
       headers: {"Content-Type": "application/json"},
     );
-
     if (response.statusCode == 200) {
       return Future.value(unit);
     } else {
