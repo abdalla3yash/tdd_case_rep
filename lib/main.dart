@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:poster/bloc.dart';
 import 'package:poster/core/app_theme.dart';
+import 'package:poster/features/posts/presentation/pages/posts_page.dart';
 import 'injection_dep.dart' as di;
 
 void main() async {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         title: "app_name",
         theme: appTheme,
         debugShowCheckedModeBanner: false,
-        home: Scaffold(),
+        home: const PostsPage(),
       ),
     );
   }
